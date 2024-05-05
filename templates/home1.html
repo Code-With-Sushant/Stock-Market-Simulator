@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Simulator Homepage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+        .header {
+            margin-top: 5px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 30px 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .container {
+          height: 30px;   
+          margin-top: 50%;
+          max-width: 100%;
+          margin: 0 auto;
+          margin-left: 20px;
+          display: flex;
+          justify-content:space-between;
+          align-items: center;
+        }
+        
+        .first {
+          display: flex;
+          justify-content:space-between;
+          align-items: center;   
+        }
+        
+        .container img {
+          height: 100px;
+          width: 100px;
+        }
+
+
+        .header h1 {
+            margin: 0;
+            margin-right: 20px;
+            font-size: 24px;
+            
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a {
+            color: black;            
+            text-decoration: none;
+            padding: 10px;           
+            margin-right: 10px;            
+        }
+
+        .header-right a.active {
+            
+            color: rgb(98, 9, 241);     
+        }
+
+        .header-right a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero {
+            position: relative;
+            background-color: #f0e7e7;
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4px;
+            height: 800px;
+            
+        }
+
+        .hero-content {
+            max-width: 600px;
+            
+            margin: 0 auto;
+            
+            text-align: center;
+            
+            padding: 0 20px;
+            
+        }
+
+        .hero-content h2 {
+            font-size: 36px;
+            
+            margin-bottom: 20px;
+            
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            
+            margin-bottom: 50px;
+            
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: dodgerblue;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .companies {
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .company-logo {
+            width: 150px;
+            margin-right: 70px;
+            text-align: center;
+            
+        }
+
+        .company-logo img {
+            margin-left: 30px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Main section */
+        .container0 {
+          height: 800px;
+          margin-top: 5%;
+        }
+        .main-section {
+            padding: 0px 0;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+          .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+          .about-content {
+            float: left;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            height: 700px;
+          }
+
+        .about-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }        
+        .gig:hover:before {
+            opacity: 1;
+        }
+        .about-content img{
+            width: 40%;
+            float: left;
+            padding: 35px;
+            border-radius: 100px;
+        }
+        .main {
+            width: 95.5%; 
+            padding: 40px 0;
+        }
+
+        .main .container1 {
+            width: 100%;
+            margin: auto;
+            margin-left: 60px;
+            display: inline;
+        }
+
+        .content-wrapper1 {
+            width: 100%;
+            padding: 20px;
+            margin: 0;
+            background-color: #fff;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            display: inline-block;
+            height: 700px;
+        }
+
+        .content-wrapper1 h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-wrapper1 ul {
+            margin-top: 10px;
+            padding-left: 40px;
+            margin-bottom: 50px;
+        }
+
+        .content-wrapper1 ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #343a40;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-left: 40px;
+        }
+
+        .explore-btn:hover {
+            background-color: #555;
+        }
+
+
+
+        .content-wrapper1 img {
+            width: 40%;
+            float: right;
+            border-radius: 10px 10px 0 0;
+            margin-top: 5%;
+            
+            transition: transform 0.3s;
+        }
+
+        .content-wrapper1 img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class='first'>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="LOGO">
+        <h1>Stock Market Simulator</h1>
+      </div>
+      <div class="header-right">
+        <a class="active" href="/">Home</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('screener') }}">Screener</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="">Welcome {{ User }}</a>
+      </div>
+    </div>
+  </header> 
+  
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Stock Market Simulator</h2>
+            <p>A platform trusted by millions for trading and investments.</p>
+            <a href="#">Welcome {{ User }}</a>
+        </div>
+    </section>
+    <div class="companies">
+        <marquee behavior="#" direction="left">
+            <div class="company-logo"><img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+                <img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+                <img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+                <img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+                <img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+                <img src="{{ url_for('static', filename='TCS.png') }}" alt="Company 1">
+            </div>
+        </marquee>
+      </div>
+      <hr>
+    <section class="main-section">
+      <div class="container0">
+          <div class="content-wrapper">
+              <div class="about-content">
+                  <img src="{{ url_for('static', filename='about us.jpg') }}" alt="Image for about us">
+                  
+                  <h2>About Us</h2><br><br>
+                  <p>Welcome to Stock Market Simulator, a platform dedicated to providing a realistic trading experience to users of all levels. Whether you're a seasoned investor or just starting out.  Simulators are great for beginners to learn the ropes of investing, including how to research stocks, place trades, and manage a portfolio. You can experiment with different strategies and make mistakes without any personal loss.</p>
+                  <p>Our mission is to educate and empower individuals to make informed investment decisions. With our user-friendly interface and access to real-time market data, users can learn about various investment strategies, analyze market trends, and hone their trading skills.</p>
+                  <p>Join us today and embark on your journey to financial literacy and success in the world of finance!</p><br><br>
+                  <a href="#" class="explore-btn">Discover More</a>
+              </div>   
+              </div>
+          </div>
+      </div>
+  </section>
+  <hr>
+  <section class="main">
+    <div class="container1">
+        <div class="content-wrapper1">
+            <img src="{{ url_for('static', filename='learn.jpg') }}" alt="image for Learn">
+            <h2>Learn About Stock Market</h2>
+            <ul>
+              <li><strong>Basic Knowledge:</strong> Learn the fundamental concepts of the stock market.</li>
+              <li><strong>Fundamental Analysis:</strong> A few elements of quantitative fundamental analysis are EPS, P/E ratio, P/B ratio, Debt/Equity ratio and RoE ratio.</li>
+                <li><strong>Techinical Analysis:</strong> The two primary variables for technical analysis are the time frames considered and the particular technical indicators that a trader chooses to utilize.</li>
+                <li><strong>Strategies:</strong> Explore different investment strategies and techniques.</li>
+                <li><strong>Backtesting:</strong> Backtesting parameters can include the capital at risk, initial capital, commission fees, portfolio size, benchmark, and average bid-ask spread.</li>
+                <li><strong>Buy and sell order:</strong> Different types of order for buying and selling various stocks and their specility.</li>
+                <li><strong>Dashboard:</strong> Discover UI and chartpatterns in stock market.</li>
+                <li><strong>Portfolio:</strong> Manage the MIS and CNC i.e. holding of stocks operated by an user.</li>
+                <li><strong>Equity Market:</strong> Shares, which represent ownership in a company are traded.</li>
+                <li><strong>Commodity Market:</strong> Commodities such as oil, wheat, energy, cocoa etc are traded.</li>
+                <li><strong>More:</strong> Discover advanced topics and insights into the stock market.</li>
+            </ul>
+            <a href="#" class="explore-btn">Explore</a>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="contact">
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stock Market Simulator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header {
+            margin-top: 5px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 30px 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .container {
+            margin-top: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+            margin-left: 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+        }
+        .header h1 {
+            margin: 0;
+            margin-right: 20px;
+            font-size: 24px;   
+        }
+        .header-right {
+            display: flex;
+            align-items: center;   
+        }
+        .header-right a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            margin-right: 10px;            
+            border-radius: 4px; 
+        }
+        .header-right a.active {  
+            color: rgb(98, 9, 241);
+        }
+        .header-right a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+        /* Main section */
+        .main-section {
+            padding: 0px 0;
+            margin-top: 10px; 
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .about-content {
+            float: left;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .about-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }        
+        .gig:hover:before {
+            opacity: 1;
+        }
+        .about-content img{
+            width: 40%;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Stock Market Simulator</h1>
+            <div class="header-right">
+                <a href="/">Home</a>
+                <a class="active" href="{{ url_for('aboutus') }}">About</a>
+                <a href="{{ url_for('learn') }}">Learn</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('signup') }}">Login/Signup</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="main-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="about-content">
+                    <img src="{{ url_for('static', filename='about us.jpg') }}" alt="gig">
+                    
+                    <h2>About Us</h2>
+                    <p>Welcome to Stock Market Simulator, a platform dedicated to providing a realistic trading experience to users of all levels. Whether you're a seasoned investor or just starting out, our platform offers a safe environment to practice trading without the risk of losing real money.</p>
+                    <p>Our mission is to educate and empower individuals to make informed investment decisions. With our user-friendly interface and access to real-time market data, users can learn about various investment strategies, analyze market trends, and hone their trading skills.</p>
+                    <p>Join us today and embark on your journey to financial literacy and success in the world of finance!</p>
+                </div>                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

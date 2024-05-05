@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flask</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <form action="{{ url_for('register') }}" method="post">
+    <label for="username">username </label><br>
+    <input type="text" id="username" name="username" value=""><br>
+
+    <label for="password">password</label><br>
+    <input type="password" id="password" name="password" value=""><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+{{ text }}
+</body>
+</html>

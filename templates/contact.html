@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+        .header {
+            margin-top: 5px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 30px 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .container {
+          height: 30px;   
+          margin-top: 50%;
+          max-width: 100%;
+          margin: 0 auto;
+          margin-left: 20px;
+          display: flex;
+          justify-content:space-between;
+          align-items: center;
+        }
+        
+        .first {
+          display: flex;
+          justify-content:space-between;
+          align-items: center;   
+        }
+        
+        .container img {
+          height: 100px;
+          width: 100px;
+        }
+
+
+        .header h1 {
+            margin: 0;
+            margin-right: 20px;
+            font-size: 24px;
+            
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a {
+            color: black;            
+            text-decoration: none;
+            padding: 10px;           
+            margin-right: 10px;            
+        }
+
+        .header-right a.active {
+            
+            color: rgb(98, 9, 241);     
+        }
+
+        .header-right a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero {
+            position: relative;
+            background-color: #f0e7e7;
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4px;
+            height: 800px;
+            
+        }
+
+        .hero-content {
+            max-width: 600px;
+            
+            margin: 0 auto;
+            
+            text-align: center;
+            
+            padding: 0 20px;
+            
+        }
+
+        .hero-content h2 {
+            font-size: 36px;
+            
+            margin-bottom: 20px;
+            
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            
+            margin-bottom: 50px;
+            
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: dodgerblue;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .companies {
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .company-logo {
+            width: 150px;
+            margin-right: 70px;
+            text-align: center;
+            
+        }
+
+        .company-logo img {
+            margin-left: 30px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Main section */
+        .container0 {
+          height: 800px;
+          margin-top: 5%;
+          width: 100%;
+        }
+        .main-section {
+            padding: 0px 0;
+            margin-top: 10px;
+            display: flex;
+            justify-content:center;
+            width: 100%;
+            /* align-items: flex; */
+          }
+          .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+          }
+          .contact-content {
+            float: left;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            height: 700px;
+          }
+
+        .contact-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }        
+        .gig:hover:before {
+            opacity: 1;
+        }
+        .contact-content img{
+            width: 40%;
+            float: right;
+            padding: 15px;
+            border-radius: 100px;
+        }
+        .main {
+            width: 95.5%;
+            /* padding: 40px 0; */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class='first'>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="LOGO">
+            <h1>Stock Market Simulator</h1>
+          </div>
+          <div class="header-right">
+            <a href="/">Home</a>
+            <a href="{{ url_for('aboutus') }}">About</a>
+            <a href="{{ url_for('learn') }}">Learn</a>
+            <a class="active" href="{{ url_for('contact') }}">Contact</a>
+          </div>
+        </div>
+      </header>
+      
+      <section class="main-section">
+        <div class="container0">
+            <div class="content-wrapper">
+                <div class="contact-content">
+                    <img src="{{ url_for('static', filename='contact.png') }}" alt="Image for contact us">
+                 
+                    <h2>Get in Touch</h2><br><br>
+                    <p>This is our contact page. If you have any query you can freely contact us. We will try our best to help you. Fill out the following form by clicking below.</p>
+
+                    <button type="button"><link rel="stylesheet" href="https://forms.gle/mchavNcA6LCCNzCEA">CLICK HERE</button>
+                        
+                </div>   
+            </div>
+        </div>
+    </section>
+</body>
+</html>

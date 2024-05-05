@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Stock Market</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+        .header {
+            margin-top: 5px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 30px 0;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .container1 {
+            margin-top: 10px;
+            max-width: 100%;
+            
+            margin: 0 auto;
+            margin-left: 20px;
+            
+            display: flex;
+            
+            justify-content: space-between;
+           
+            align-items: center;
+            
+        }
+
+        .header h1 {
+            margin: 0;
+            margin-right: 20px;
+            
+            font-size: 24px;
+            
+        }
+
+        .header-right {
+            display: flex;
+            
+            align-items: center;
+            
+        }
+
+        .header-right a {
+            color: black;
+            
+            text-decoration: none;
+            
+            padding: 10px;
+            
+            margin-right: 10px;
+            
+            border-radius: 4px;
+            
+        }
+
+        .header-right a.active {
+            
+            color: rgb(98, 9, 241);
+        }
+
+        .header-right a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main section */
+        .main {
+            width: 95.5%;
+            padding: 40px 0;
+        }
+
+        /* Responsive layout for .content-wrapper and .gig */
+        .main .container1 {
+            width: 100%;
+            margin: auto;
+            margin-left: 0.5%;
+            display: inline;
+        }
+
+        .content-wrapper {
+            width: 100%;
+            /* 60% width on larger screens */
+            padding: 20px;
+            /* Adjusted padding */
+            margin: 0;
+            /* Removed margin */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            /* Add some space at the bottom */
+            display: inline-block;
+        }
+
+        .content-wrapper h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-wrapper ul {
+            margin-top: 10px;
+            padding-left: 40px;
+            margin-bottom: 50px;
+        }
+
+        .content-wrapper ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #343a40;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-left: 40px;
+        }
+
+        .explore-btn:hover {
+            background-color: #555;
+        }
+
+
+
+        .content-wrapper img {
+            width: 40%;
+            float: right;
+            border-radius: 10px 10px 0 0;
+            /* Adjusted border-radius */
+            transition: transform 0.3s;
+        }
+
+
+        .content-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-wrapper img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container1">
+            <h1>Stock Market Simulator</h1>
+            <div class="header-right">
+                <a href="/">Home</a>
+                <a href="{{ url_for('aboutus')}}">About</a>
+                <a class="active" href="{{ url_for('learn') }}">Learn</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('signup') }}">Login/Signup</a> 
+            </div>
+        </div>
+    </header> 
+
+    <section class="main">
+        <div class="container1">
+            <div class="content-wrapper">
+                <img src="{{ url_for('static', filename='learn.jpg') }}" alt="image for Learn">
+            <h2>Learn About Stock Market</h2>
+            <ul>
+              <li><strong>Basic Knowledge:</strong> Learn the fundamental concepts of the stock market.</li>
+              <li><strong>Fundamental Analysis:</strong> A few elements of quantitative fundamental analysis are EPS, P/E ratio, P/B ratio, Debt/Equity ratio and RoE ratio.</li>
+                <li><strong>Techinical Analysis:</strong> The two primary variables for technical analysis are the time frames considered and the particular technical indicators that a trader chooses to utilize.</li>
+                <li><strong>Strategies:</strong> Explore different investment strategies and techniques.</li>
+                <li><strong>Backtesting:</strong> Backtesting parameters can include the capital at risk, initial capital, commission fees, portfolio size, benchmark, and average bid-ask spread.</li>
+                <li><strong>Buy and sell order:</strong> Different types of order for buying and selling various stocks and their specility.</li>
+                <li><strong>Dashboard:</strong> Discover UI and chartpatterns in stock market.</li>
+                <li><strong>Portfolio:</strong> Manage the MIS and CNC i.e. holding of stocks operated by an user.</li>
+                <li><strong>Equity Market:</strong> Shares, which represent ownership in a company are traded.</li>
+                <li><strong>Commodity Market:</strong> Commodities such as oil, wheat, energy, cocoa etc are traded.</li>
+                <li><strong>More:</strong> Discover advanced topics and insights into the stock market.</li>
+            </ul>
+            <a href="#" class="explore-btn">Explore</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

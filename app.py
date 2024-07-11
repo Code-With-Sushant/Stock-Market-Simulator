@@ -14,8 +14,8 @@ connection = pymysql.connect(host="localhost", user="root", passwd="", database=
 # Email configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'technicalmail247@gmail.com'
-app.config['MAIL_PASSWORD'] = 'cpam cfmd zthv etnb'
+app.config['MAIL_USERNAME'] = 'Enter your mail'
+app.config['MAIL_PASSWORD'] = 'generate a pass key for you mail'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)

@@ -30,7 +30,7 @@ def execute_query(query, params=None, fetchone=False):
 
 def send_email(recipient, subject, body):
     try:
-        msg = Message(subject, sender='technicalmail247@gmail.com', recipients=[recipient])
+        msg = Message(subject, sender='Enter the same mail', recipients=[recipient])
         msg.body = body
         mail.send(msg)
         return True
